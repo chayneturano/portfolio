@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquariums</title>
+</head>
+<style>
+    html {
+        background-image: linear-gradient(to top, #0A4D68 0%, #00FFCA 100%);
+        text-align: center;
+        margin: 0 auto;
+        }
+    
+    h1 {
+        color: #0A4D68;
+        text-align: center;   
+        text-decoration: underline;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color:#088395;
+        text-align: center;   
+        margin: 0 auto;
+    }
+    button {
+        background-color: #00FFCA;
+        border-style: solid 10px;
+        border-color: #0A4D68;
+        border-radius: 8px;
+        box-shadow: #088395 10px;
+        font-size: 20px;
+        margin: 0;
+        padding: 30px;
+        text-align: center;
+        transition: ease-in-out 3s;  
+    }
+
+    button:hover {
+        background-color: #088395;
+        cursor:grab; 
+    }
+
+    p {
+        background-color: aliceblue;
+        opacity: 60%;
+        line-height: 30px;
+    }
+
+    span {
+        color:purple;
+        text-shadow: 10px;
+        font-weight: bold ;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        margin:0;
+        align-items:center;
+        gap: 40px;
+        flex-basis: 400px;
+    }
+</style>
+
+<body>
+    
+    <h1>Must See Aquariums in the United States</h1>
+    <h2> Top three aquariums</h2>
+    
+    <div class="container">
+
+    <div>
+    <h3> <a href= "https://aqua.org/"> National Aquarium </a> </h3>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/273/original/aq0.jpg?1686538679" alt="National Aquarium" 
+    width="300" height="180"/>
+
+    <p>
+        Established in 1981, the award-winning <em>National Aquarium</em> receives more than 2 million visitors each year. National
+        Aquarium is currently the largest paid tourist destination in <strong> Maryland </strong>. You can visit the aquarium and see thousands of
+        <span>reptiles and mammals.</span>
+    </p>
+    </div>
+
+    <div>
+    <h3> <a href="https://www.georgiaaquarium.org"> Georgia Aquarium </a> </h3>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/269/original/aq1.jpg?1686538472" alt= "Georgia Aquarium Picture" width="300" height="180"> 
+    <p>
+        <em> Georgia Aquarium </em> is the largest aquarium in the United States, with over 100,000 creatures and 500 underwater species. Located in <strong> Atlanta, Georgia,</strong> this is a must see!
+        It’s the only aquarium in the United States that houses <span> whale sharks </span>.  It is an experienced that is unmatched anywhere else in the world!
+    </p>
+    </div>
+    
+    <div>
+    <h3>
+     <a href="https://www.neworleans.com/listing/audubon-aquarium/312/"> Audubon Aquarium </a>
+    </h3>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/270/original/aq2.jpg?1686538482" alt="Audubon Aquarium Picture" width="300" height="180"/>
+    <p>
+        The <em> Audubon Aquarium </em> allows visitors to learn about marine life in the <strong> Mississippi River </strong>. Most of the marine creatures in this
+        aquarium are found in North and South America. The Amazon area and Caribbean reef are the most visited exhibits in the Aquarium of the Americas. In the exhibits, you
+        will see <span> catfish, paddlefish, and different types of owls. </span>
+    </p>
+    </div>
+    </div>
+    
+    <div>
+        <button class="search-Aquarium">
+            Find an Aquarium to Visit!
+        </button>
+    </div>
+
+    <p> This page was built by 
+        <a href = "https://chayneturano.github.io/portfolio/" target = "_blank">
+            Chayne Turano
+        </a> <br/>
+        🐠🐟🐡🦈🦦
+        </p>
+  
+   
+   <script>
+        function emailValid() {     
+            const regexExp = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+            let email = prompt("What is your email address?"); 
+            if (email.match(regexExp)) {
+                return email;
+            } else {
+            alert("This is not a valid email. Please try again");
+            emailValid();
+        }
+        }
+
+        function findAquarium() {
+            let name = prompt("What is your first and last name?");
+            emailValid();
+            let email = emailValid();
+            let location = prompt("What location would you like to search for an aquarium in?");
+            let milesAway = prompt("How many miles from your location would you like to travel?");
+            alert(`Hi ${name}, we will generate a report and sent it to ${email} to search for Aquariums within ${milesAway} of ${location}. Thanks for visiting!`);
+        }
+        
+        let searchAquarium = document.querySelector(".search-Aquarium");
+        searchAquarium.addEventListener("click", findAquarium);
+    </script>
+
+</body>
+</html>
