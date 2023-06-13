@@ -19,11 +19,16 @@
         text-align: center;
     }
 </style>
-<h1>Portfolio of the first Few Days of 
+<h1>Portfolio of the First Few Weeks of 
     <em>html and CSS</em>
     Coding </h1> 
 <h3>Chayne Turano</h3>
 <hr/>
+
+<a href="https://github.com/chayneturano/portfolio/blob/main/public/AquariumTinker.html">
+<h2>Top Aquarium Homepage </h2>
+</a>
+<img src="" height="400">
 
 <a href="./public/reasons-love-code.html"> 
     <h2>Reasons I Love to Code Project</h2> 
@@ -31,6 +36,7 @@
 <img src="./assets/images/Reasons.PNG" alt="A list of reasons I like to code" height="400">
 
 <a href="motivational_poster.html">
+
     <h2> Motivational Poster </h2>
  </a>
  <img src=".assets/images/motivational.PNG alt= "Programming is 60% Problem Solving." height="400">
